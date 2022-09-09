@@ -15,6 +15,8 @@ async function test (){
     cloud.innerHTML = `${jsonResponse.clouds.all}${"%"}`
     pressure.innerHTML = jsonResponse.main.pressure
     humidity.innerHTML = `${jsonResponse.main.humidity}${"%"}`
+    wind.innerHTML = `${jsonResponse.wind.speed}${"Km/hr"}`
+    gust.innerHTML = `${jsonResponse.wind.gust}${"Km/hr"}`
 }
 
 const timeDisp = ()=>{
