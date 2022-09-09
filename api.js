@@ -10,8 +10,4 @@ async function test (){
     disp.innerHTML =`
         <h1>${jsonResponse.name}</h1>
         `
-    // jsonResponse.map((item)=>{
-        
-        
-    // })
 }

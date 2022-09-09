@@ -7,13 +7,51 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <input type="text" name="" id="userLocation" placeholder="City Name">
-        <button onclick="test()">Test</button>
-    </div>
-   
-    <div id="disp"></div>
+    <div class="gen-div">
+        <div class="main">
 
+        </div>
+        <div class="sidebar">
+            <div class="search-div">
+                <input type="text" name="" id="userLocation" placeholder="City Name">
+                <button onclick="test()">🔍</button>
+            </div>
+            
+        </div>
+    </div>
+
+
+    
+    <div id="disp"></div>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .gen-div{
+            display: grid;
+            grid-template-columns: 6fr 3fr;
+        }
+        .main{
+            border: 1px solid blue;
+            height: 99.5vh;
+        }
+        .sidebar{
+            border: 1px solid red;
+            height: 99.5vh;
+        }
+        .search-div{
+            display: flex;
+            justify-content: space-between;
+            padding: 25px;
+        }
+        #userLocation{
+            /* border: none; */
+            border-bottom: 1px solid black;
+            padding: 8px;
+            width: 70%;
+        }
+    </style>
     <script src="/api.js"></script>
 </body>
 </html>
