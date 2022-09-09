@@ -7,13 +7,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="/bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/css/bootstrap.css">
 </head>
-<body style="height: 100vh;">
+<body style="height: 100vh;" onload="currentLocation()">
     <div class="gen-div">
         <div class="rightside-div p-4">
             <p>The Weather</p>
             <div class="info-div">
                 <div class="c">
-                    <h1 id="degree"><sup>°</sup></h1>
+                    <h1 id="degree"></h1>
                 </div>
                 <div class="c">
                     <h4 id="cityName"></h4>
@@ -102,16 +102,12 @@
             border: 1px solid red;
             height: 100vh;
         }
-        /* .search-div{
-            display: flex;
-            justify-content: space-between;
-            padding: 25px;
-        } */
         #userLocation{
             border: none;
             border-bottom: 1px solid black;
             padding: 8px;
             width: 70%;
+            outline: none;
         }
     </style>
     <script src="/api.js"></script>

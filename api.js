@@ -7,7 +7,7 @@ async function test (){
     console.log(jsonResponse)
 
     cityName.innerHTML = jsonResponse.name;
-    degree.innerHTML = jsonResponse.main.temp
+    degree.innerHTML = `${jsonResponse.main.temp}${"<sup>°</sup>"}`
     condition.innerHTML = jsonResponse.weather[0].description;
     country.innerHTML = jsonResponse.sys.country
     longitude.innerHTML = jsonResponse.coord.lon
@@ -39,3 +39,11 @@ const timeFormat = (timer)=>{
         return timer
     }
 }
+
+// const currentLocation = ()=>{
+//     navigator.geolocation.getCurrentPosition((position)=>{
+//         longitude.innerHTML = position.coords.longitude
+//         latitude.innerHTML = position.coords.latitude
+//         country.innerHTML = position.city.country
+//     })
+// }
