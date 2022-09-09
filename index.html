@@ -11,17 +11,16 @@
     <div class="gen-div">
         <div class="rightside-div p-4">
             <p>The Weather</p>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-            <div class="a d-flex">
-                <div class="col-lg-2">
+            <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+            <div class="info-div">
+                <div class="c border">
                     <h1>26.5<sup>°</sup></h1>
                 </div>
-                <div class="col-lg-2">
+                <div class="c border">
                     <h4>Abuja</h4>
-                    22-22-2222
+                    <p>22-22-2222</p>
                 </div>
-                <div class="col-lg-3 border">
+                <div class="c border">
                     <div><img src="/rain.PNG" alt=""></div>
                     <p>Light Raining Shower</p>
                 </div>
@@ -84,12 +83,22 @@
             display: grid;
             grid-template-columns: 6fr 3fr;
         }
-        .a{
+        .info-div{
             border: 1px solid red;
+            position: absolute;
+            bottom: 0px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .c{
+            display: grid;
+            justify-content: center;
+            align-items: center;
         }
         .rightside-div{
             border: 1px solid blue;
             height: 100vh;
+            position: relative;
         }
         .sidebar{
             border: 1px solid red;
