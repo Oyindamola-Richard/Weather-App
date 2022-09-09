@@ -7,19 +7,23 @@
     <title>Document</title>
     <link rel="stylesheet" href="/bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/css/bootstrap.css">
 </head>
-<body>
+<body style="height: 100vh;">
     <div class="gen-div">
-        <div class="main p-5">
+        <div class="rightside-div p-4">
             <p>The Weather</p>
-            <div>
-                <div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+            <div class="a d-flex">
+                <div class="col-lg-2">
+                    <h1>26.5<sup>°</sup></h1>
                 </div>
-                <div>
-
+                <div class="col-lg-2">
+                    <h4>Abuja</h4>
+                    22-22-2222
                 </div>
-                <div>
-                    
+                <div class="col-lg-3 border">
+                    <div><img src="/rain.PNG" alt=""></div>
+                    <p>Light Raining Shower</p>
                 </div>
             </div>
         </div>
@@ -80,13 +84,16 @@
             display: grid;
             grid-template-columns: 6fr 3fr;
         }
-        .main{
+        .a{
+            border: 1px solid red;
+        }
+        .rightside-div{
             border: 1px solid blue;
-            height: 99.5vh;
+            height: 100vh;
         }
         .sidebar{
             border: 1px solid red;
-            height: 99.5vh;
+            height: 100vh;
         }
         /* .search-div{
             display: flex;
