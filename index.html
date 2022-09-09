@@ -11,18 +11,17 @@
     <div class="gen-div">
         <div class="rightside-div p-4">
             <p>The Weather</p>
-            <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
             <div class="info-div">
-                <div class="c border">
-                    <h1>26.5<sup>°</sup></h1>
+                <div class="c">
+                    <h1 id="degree"><sup>°</sup></h1>
                 </div>
-                <div class="c border">
-                    <h4>Abuja</h4>
-                    <p>22-22-2222</p>
+                <div class="c">
+                    <h4 id="cityName"></h4>
+                    <div id="clock"></div>
                 </div>
-                <div class="c border">
+                <div class="c">
                     <div><img src="/rain.PNG" alt=""></div>
-                    <p>Light Raining Shower</p>
+                    <p id="condition"></p>
                 </div>
             </div>
         </div>
@@ -34,30 +33,30 @@
             <div class="pt-4">
                 <div>
                     <h5>Country</h5>
-                    <p>GB</p>
+                    <p id="country"></p>
                 </div>
                 <div>
                     <h5>Longitude</h5>
-                    <p>-0.13</p>
+                    <p id="longitude"></p>
                 </div>
                 <div>
                     <h5>Latitude</h5>
-                    <p>51.51</p>
+                    <p id="latitude"></p>
                 </div>
             </div>
             <hr>
             <div>
                 <div class="d-flex justify-content-between">
                     <p>Cloud</p>
-                    <p>100%</p>
+                    <p id="cloud"></p>
                 </div>
                 <div class="d-flex justify-content-between">
-                    <p>Preasure</p>
-                    <p>1012</p>
+                    <p>Pressure</p>
+                    <p id="pressure"></p>
                 </div>
                 <div class="d-flex justify-content-between">
                     <p>Humidity</p>
-                    <p>83%</p>
+                    <p  id="humidity"></p>
                 </div>
                 <div class="d-flex justify-content-between">
                     <p>Wind</p>
@@ -73,7 +72,6 @@
 
 
     
-    <div id="disp"></div>
     <style>
         body{
             margin: 0px;
