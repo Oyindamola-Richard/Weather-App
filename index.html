@@ -12,12 +12,38 @@
         <div class="main">
 
         </div>
-        <div class="sidebar">
-            <div class="search-div">
+        <div class="sidebar p-4">
+            <div class="search-div d-flex justify-content-between">
                 <input type="text" name="" id="userLocation" placeholder="City Name">
-                <button onclick="test()">🔍</button>
+                <button onclick="test()" class="p-2">🔍</button>
             </div>
-            
+            <hr>
+            <div>
+                
+            </div>
+            <hr>
+            <div>
+                <div class="d-flex justify-content-between">
+                    <p>Cloud</p>
+                    <p>100%</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p>Preasure</p>
+                    <p>1012</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p>Humidity</p>
+                    <p>83%</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p>Wind</p>
+                    <p>3.3Km/hr</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p>Gust</p>
+                    <p>6.3Km/hr</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -41,13 +67,13 @@
             border: 1px solid red;
             height: 99.5vh;
         }
-        .search-div{
+        /* .search-div{
             display: flex;
             justify-content: space-between;
             padding: 25px;
-        }
+        } */
         #userLocation{
-            /* border: none; */
+            border: none;
             border-bottom: 1px solid black;
             padding: 8px;
             width: 70%;
