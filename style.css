@@ -2,7 +2,6 @@ body{
     margin: 0px;
     padding: 0px;
     color: #ffffff;
-    
 }
 .gen-div{
     display: grid;
@@ -14,16 +13,30 @@ body{
     height: 100vh;
 }
 .info-gendiv{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: absolute;
     bottom: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
 }
 .info-div{
+    /* border: 1px solid red; */
     display: grid;
     justify-content: center;
     align-items: center;
+}
+#degree{
+    height: 50px;
+    width: 100px;
+}
+#cityName{
+    height: 30px;
+    width: 120px;
+}
+#condition{
+    height: 30px;
+    width: 120px;
 }
 .leftside-div{
     border: 1px solid blue;
