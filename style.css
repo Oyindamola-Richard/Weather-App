@@ -61,6 +61,9 @@ body{
 #userLocation::placeholder{
     color: #ffffff;
 }
+.a{
+    height: 25px;
+}
 hr{
     color: #ffffff;
 }
