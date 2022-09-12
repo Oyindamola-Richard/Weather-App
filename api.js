@@ -40,10 +40,11 @@ const timeFormat = (timer)=>{
     }
 }
 
-// const currentLocation = ()=>{
-//     navigator.geolocation.getCurrentPosition((position)=>{
-//         longitude.innerHTML = position.coords.longitude
-//         latitude.innerHTML = position.coords.latitude
-//         country.innerHTML = position.city.country
-//     })
-// }
+const currentLocation = ()=>{
+    navigator.geolocation.getCurrentPosition((position)=>{
+        longitude.innerHTML = position.coords.longitude
+        latitude.innerHTML = position.coords.latitude
+    })
+}
+
+// https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
