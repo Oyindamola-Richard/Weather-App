@@ -2,35 +2,35 @@ body{
     margin: 0px;
     padding: 0px;
     color: #ffffff;
+    
+}
+.gen-div{
+    display: grid;
+    grid-template-columns: 6fr 3fr;
     background-image: url(/img/pexels-worldspectrum-844124.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
 }
-.gen-div{
-    display: grid;
-    grid-template-columns: 6fr 3fr;
-    
-}
-.info-div{
+.info-gendiv{
     border: 1px solid red;
     position: absolute;
     bottom: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-.c{
+.info-div{
     display: grid;
     justify-content: center;
     align-items: center;
 }
-.rightside-div{
+.leftside-div{
     border: 1px solid blue;
     height: 100vh;
     position: relative;
 }
-.sidebar{
+.rightsidebar{
     border: 1px solid red;
     height: 100vh;
     position: relative;
