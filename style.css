@@ -98,7 +98,33 @@ hr{
     }
 }
 @media all and (min-width:321px) and (max-width:375px){
-    
+    .info-gendiv{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 0px;
+    }
+    .info-div{
+        justify-content: start;
+        align-items: center;
+    }
+    #degree{
+        font-size: 3.5em;
+    }
+    .country{
+        margin-top: -5px;
+        font-size: 1em;
+    }
+    .a{
+        font-size: 0.8em;
+        height: 15px;
+        margin-top: -10px;
+    }
+    .con{
+        font-size:0.8em;
+    }
+    #userLocation::placeholder{
+        font-size: 0.6em;
+    } 
 }
 @media all and (min-width:376px) and (max-width:425px){
     
