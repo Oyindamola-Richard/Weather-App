@@ -26,45 +26,47 @@
                 </div>
             </div>
         </div>
-        <div class="rightsidebar p-4">
+        <div class="rightsidebar p-md-4">
             <div class="search-div d-flex justify-content-between">
                 <input type="text" name="" id="userLocation" placeholder="City Name">
-                <button onclick="search()" class="p-2">🔍</button>
+                <button onclick="search()" class="p-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg></button>
             </div>
             <div class="pt-4">
                 <div>
-                    <h5>Country</h5>
+                    <h5 class="country">Country</h5>
                     <p id="country" class="a"></p>
                 </div>
                 <div>
-                    <h5>Longitude</h5>
+                    <h5 class="country">Longitude</h5>
                     <p id="longitude" class="a"></p>
                 </div>
                 <div>
-                    <h5>Latitude</h5>
+                    <h5 class="country">Latitude</h5>
                     <p id="latitude" class="a"></p>
                 </div>
             </div>
             <hr>
             <div>
                 <div class="d-md-flex justify-content-between">
-                    <p>Cloud</p>
+                    <p class="con">Cloud</p>
                     <p id="cloud" class="a"></p>
                 </div>
                 <div class="d-md-flex justify-content-between">
-                    <p>Pressure</p>
+                    <p class="con">Pressure</p>
                     <p id="pressure" class="a"></p>
                 </div>
                 <div class="d-md-flex justify-content-between">
-                    <p>Humidity</p>
+                    <p class="con">Humidity</p>
                     <p  id="humidity" class="a"></p>
                 </div>
                 <div class="d-md-flex justify-content-between">
-                    <p>Wind</p>
+                    <p class="con">Wind</p>
                     <p id="wind" class="a"></p>
                 </div>
                 <div class="d-md-flex justify-content-between">
-                    <p>Gust</p>
+                    <p class="con">Gust</p>
                     <p id="gust" class="a"></p>
                 </div>
             </div>
