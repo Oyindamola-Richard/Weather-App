@@ -155,7 +155,36 @@ hr{
         font-size: 0.8em;
     } 
 }
-@media all and (min-width:426px) and (max-width:768px){
+@media all and (min-width:426px) and (max-width:630px){
+    .info-gendiv{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 0px;
+    }
+    .info-div{
+        justify-content: start;
+        align-items: center;
+    }
+    #degree{
+        font-size: 3.5em;
+    }
+    .country{
+        margin-top: -5px;
+        font-size: 1em;
+    }
+    .a{
+        font-size: 0.8em;
+        height: 15px;
+        margin-top: -10px;
+    }
+    .con{
+        font-size:0.8em;
+    }
+    #userLocation::placeholder{
+        font-size: 0.8em;
+    }
+}
+@media all and (min-width:631px) and (max-width:768px){
     .info-gendiv{
         column-gap: 20px;
     }
