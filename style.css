@@ -1,0 +1,53 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    color: #ffffff;
+    background-image: url(/pexels-worldspectrum-844124.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.gen-div{
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    
+}
+.info-div{
+    border: 1px solid red;
+    position: absolute;
+    bottom: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.c{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.rightside-div{
+    border: 1px solid blue;
+    height: 100vh;
+    position: relative;
+}
+.sidebar{
+    border: 1px solid red;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(225, 225, 225, 0.1);
+}
+#userLocation{
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background-color: transparent;
+    padding: 8px;
+    width: 70%;
+    outline: none;
+    color: #ffffff;
+}
+#userLocation::placeholder{
+    color: #ffffff;
+}
+hr{
+    color: #ffffff;
+}
