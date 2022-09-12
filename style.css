@@ -156,7 +156,29 @@ hr{
     } 
 }
 @media all and (min-width:426px) and (max-width:768px){
-    
+    .info-gendiv{
+        column-gap: 30px;
+    }
+    .info-div{
+        justify-content: start;
+        align-items: center;
+    }
+    #degree{
+        font-size: 3.5em;
+    }
+    .country{
+        font-size: 1em;
+    }
+    .a{
+        font-size: 0.9em;
+        height: 15px;
+    }
+    .con{
+        font-size:0.9em;
+    }
+    #userLocation::placeholder{
+        font-size: 0.8em;
+    } 
 }
 @media all and (min-width:769px) and (max-width:820px){
     
