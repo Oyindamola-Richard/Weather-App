@@ -46,23 +46,23 @@
             </div>
             <hr>
             <div>
-                <div class="d-flex justify-content-between">
+                <div class="d-md-flex justify-content-between">
                     <p>Cloud</p>
                     <p id="cloud"></p>
                 </div>
-                <div class="d-flex justify-content-between">
+                <div class="d-md-flex justify-content-between">
                     <p>Pressure</p>
                     <p id="pressure"></p>
                 </div>
-                <div class="d-flex justify-content-between">
+                <div class="d-md-flex justify-content-between">
                     <p>Humidity</p>
                     <p  id="humidity"></p>
                 </div>
-                <div class="d-flex justify-content-between">
+                <div class="d-md-flex justify-content-between">
                     <p>Wind</p>
                     <p id="wind"></p>
                 </div>
-                <div class="d-flex justify-content-between">
+                <div class="d-md-flex justify-content-between">
                     <p>Gust</p>
                     <p id="gust"></p>
                 </div>
@@ -76,10 +76,17 @@
         body{
             margin: 0px;
             padding: 0px;
+            color: #ffffff;
+            background-image: url(/pexels-worldspectrum-844124.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
         }
         .gen-div{
             display: grid;
             grid-template-columns: 6fr 3fr;
+            
         }
         .info-div{
             border: 1px solid red;
@@ -101,13 +108,23 @@
         .sidebar{
             border: 1px solid red;
             height: 100vh;
+            position: relative;
+            background-color: rgba(225, 225, 225, 0.1);
         }
         #userLocation{
             border: none;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid #ffffff;
+            background-color: transparent;
             padding: 8px;
             width: 70%;
             outline: none;
+            color: #ffffff;
+        }
+        #userLocation::placeholder{
+            color: #ffffff;
+        }
+        hr{
+            color: #ffffff;
         }
     </style>
     <script src="/api.js"></script>
