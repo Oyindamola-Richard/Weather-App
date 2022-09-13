@@ -27,6 +27,7 @@ body{
 #degree{
     height: 50px;
     width: 100px;
+    font-size: 3.5em;
 }
 #cityName{
     height: 30px;
