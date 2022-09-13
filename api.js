@@ -18,6 +18,11 @@ async function search (){
     humidity.innerHTML = `${jsonResponse.main.humidity}${"%"}`
     wind.innerHTML = `${jsonResponse.wind.speed}${"Km/hr"}`
     gust.innerHTML = `${jsonResponse.wind.gust}${"Km/hr"}`
+
+
+    if (jsonResponse.weather[0].main === "Rain"){
+        gen.style.backgroundImage = `url(/img/raining.gif)`
+    }
 }
 
 const timeDisp = ()=>{
@@ -50,28 +55,28 @@ const timeFormat = (timer)=>{
 //         console.log(position.coords.longitude)
 //     })
 // }
-const currentLocation = async() =>{
-    navigator.geolocation.getCurrentPosition((position)=>{
-        longitude.innerHTML = position.coords.longitude
-        latitude.innerHTML = position.coords.latitude
-    })
-    let key = "55ae2e99fca0dd8d02b79e20bcb13981"
-    const endpoint = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude.innerHTML}&lon=${longitude.innerHTML}&appid=${key}&units=metric`
-    let response = await fetch(endpoint)
-    let currentLocation = await response.json()
-    console.log(currentLocation)
+// const currentLocation = async() =>{
+//     navigator.geolocation.getCurrentPosition((position)=>{
+//         longitude.innerHTML = position.coords.longitude
+//         latitude.innerHTML = position.coords.latitude
+//     })
+//     let key = "55ae2e99fca0dd8d02b79e20bcb13981"
+//     const endpoint = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude.innerHTML}&lon=${longitude.innerHTML}&appid=${key}&units=metric`
+//     let response = await fetch(endpoint)
+//     let currentLocation = await response.json()
+//     console.log(currentLocation)
 
-    cityName.innerHTML = currentLocation.name;
-    degree.innerHTML = `${currentLocation.main.temp}${"<sup>°</sup>"}`
-    condition.innerHTML = currentLocation.weather[0].description;
-    country.innerHTML = currentLocation.sys.country
-    // longitude.innerHTML = currentLocation.coord.lon
-    // latitude.innerHTML = currentLocation.coord.lat
-    cloud.innerHTML = `${currentLocation.clouds.all}${"%"}`
-    pressure.innerHTML = currentLocation.main.pressure
-    humidity.innerHTML = `${currentLocation.main.humidity}${"%"}`
-    wind.innerHTML = `${currentLocation.wind.speed}${"Km/hr"}`
-    gust.innerHTML = `${currentLocation.wind.gust}${"Km/hr"}`
-}
+//     cityName.innerHTML = currentLocation.name;
+//     degree.innerHTML = `${currentLocation.main.temp}${"<sup>°</sup>"}`
+//     condition.innerHTML = currentLocation.weather[0].description;
+//     country.innerHTML = currentLocation.sys.country
+//     // longitude.innerHTML = currentLocation.coord.lon
+//     // latitude.innerHTML = currentLocation.coord.lat
+//     cloud.innerHTML = `${currentLocation.clouds.all}${"%"}`
+//     pressure.innerHTML = currentLocation.main.pressure
+//     humidity.innerHTML = `${currentLocation.main.humidity}${"%"}`
+//     wind.innerHTML = `${currentLocation.wind.speed}${"Km/hr"}`
+//     gust.innerHTML = `${currentLocation.wind.gust}${"Km/hr"}`
+// }
 
 // https://api.openweathermap.org/data/2.5/weather?lat=${latitude.innerHTML}&lon={longitude.innerHTML}&appid=${key}&units=metric
