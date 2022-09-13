@@ -5,7 +5,8 @@ async function search (){
     let response = await fetch(endpoint)
     let jsonResponse = await response.json()
     console.log(jsonResponse)
-
+    let icon = `http://openweathermap.org/img/wn/${jsonResponse.weather[0].icon}@2x.png`
+    image.src = icon
     cityName.innerHTML = jsonResponse.name;
     degree.innerHTML = `${Math.round(jsonResponse.main.temp)}${"<sup>°</sup>"}`
     condition.innerHTML = jsonResponse.weather[0].description;
