@@ -7,7 +7,7 @@ async function search (){
     console.log(jsonResponse)
 
     cityName.innerHTML = jsonResponse.name;
-    degree.innerHTML = `${jsonResponse.main.temp}${"<sup>°</sup>"}`
+    degree.innerHTML = `${Math.round(jsonResponse.main.temp)}${"<sup>°</sup>"}`
     condition.innerHTML = jsonResponse.weather[0].description;
     country.innerHTML = jsonResponse.sys.country
     longitude.innerHTML = jsonResponse.coord.lon
