@@ -6,7 +6,7 @@ body{
 .gen-div{
     display: grid;
     grid-template-columns: 6fr 3fr;
-    background-image: url(/img/sunny2.jpg);
+    background-image: url(/img/sunny.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
