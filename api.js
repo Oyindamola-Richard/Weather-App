@@ -21,7 +21,7 @@ async function search (){
 
 
     if (jsonResponse.weather[0].main === "Rain"){
-        gen.style.backgroundImage = `url(/img/raining5.jpg)`
+        gen.style.backgroundImage = `url(/img/raining.jpg)`
     }
 }
 
