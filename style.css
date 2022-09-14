@@ -45,6 +45,7 @@ body{
     height: 100vh;
     position: relative;
     background-color: rgba(225, 225, 225, 0.1);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
 }
 #userLocation{
