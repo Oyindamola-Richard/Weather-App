@@ -23,6 +23,9 @@ async function search (){
     if (jsonResponse.weather[0].main === "Rain"){
         gen.style.backgroundImage = `url(/img/raining.jpg)`
     }
+    else if(jsonResponse.weather[0].main === "Clouds"){
+        gen.style.backgroundImage = `url(/img/cloud.jpg)`
+    }
 }
 
 const timeDisp = ()=>{
