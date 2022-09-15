@@ -50,22 +50,15 @@ const timeFormat = (timer)=>{
     }
 }
 
-// const jgh = ()=>{
-    
-// }
-// const getLocation = ()=>{
-//     navigator.geolocation.getCurrentPosition((position)=>{
-//         console.log(position.coords.latitude)
-//         console.log(position.coords.longitude)
-//     })
-// }
-// const currentLocation = async() =>{
+// async function currentLocation(){
 //     navigator.geolocation.getCurrentPosition((position)=>{
 //         longitude.innerHTML = position.coords.longitude
 //         latitude.innerHTML = position.coords.latitude
 //     })
 //     let key = "55ae2e99fca0dd8d02b79e20bcb13981"
-//     const endpoint = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude.innerHTML}&lon=${longitude.innerHTML}&appid=${key}&units=metric`
+//     let latitude = document.getElementById('latitude');
+//     let longitude = document.getElementById('longitude');
+//     const endpoint = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`
 //     let response = await fetch(endpoint)
 //     let currentLocation = await response.json()
 //     console.log(currentLocation)
@@ -82,5 +75,3 @@ const timeFormat = (timer)=>{
 //     wind.innerHTML = `${currentLocation.wind.speed}${"Km/hr"}`
 //     gust.innerHTML = `${currentLocation.wind.gust}${"Km/hr"}`
 // }
-
-// https://api.openweathermap.org/data/2.5/weather?lat=${latitude.innerHTML}&lon={longitude.innerHTML}&appid=${key}&units=metric
