@@ -2,6 +2,7 @@ body{
     margin: 0px;
     padding: 0px;
     color: #ffffff;
+    overflow: hidden;
 }
 .gen-div{
     display: grid;
