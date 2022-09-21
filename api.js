@@ -1,6 +1,7 @@
 
+let key = "55ae2e99fca0dd8d02b79e20bcb13981"
+
 async function search (){
-    let key = "55ae2e99fca0dd8d02b79e20bcb13981"
     const endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${userLocation.value}&appid=${key}&units=metric`
     let response = await fetch(endpoint)
     let jsonResponse = await response.json()
@@ -52,7 +53,6 @@ const timeFormat = (timer)=>{
 
 async function currentLocation(){
     navigator.geolocation.getCurrentPosition((position)=>{
-        let key = "55ae2e99fca0dd8d02b79e20bcb13981"
         let longitude = position.coords.longitude
        let  latitude = position.coords.latitude
        let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`
