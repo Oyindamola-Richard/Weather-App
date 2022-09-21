@@ -68,6 +68,14 @@ async function currentLocation(){
            humidity.innerHTML = `${currentLocation.main.humidity}${"%"}`
            wind.innerHTML = `${currentLocation.wind.speed}${"Km/hr"}`
            gust.innerHTML = `${currentLocation.wind.gust}${"Km/hr"}`
+
+           if (currentLocation.weather[0].main === "Rain"){
+            gen.style.backgroundImage = `url(/img/raining.jpg)`
+        }
+        else if(currentLocation.weather[0].main === "Clouds"){
+            gen.style.backgroundImage = `url(/img/cloud.jpg)`
+        }
+        else{gen.style.backgroundImage = `url(/img/sunny.jpg)`}
        })
     })
 }
