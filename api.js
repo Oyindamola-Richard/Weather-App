@@ -53,16 +53,16 @@ const timeFormat = (timer)=>{
 
 async function currentLocation(){
     navigator.geolocation.getCurrentPosition((position)=>{
-        let longitude = position.coords.longitude
-       let  latitude = position.coords.latitude
-       let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`
+        let longiTude = position.coords.longitude
+       let  latiTude = position.coords.latitude
+       let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latiTude}&lon=${longiTude}&appid=${key}&units=metric`
        fetch(url).then((response)=>response.json()).then((currentLocation)=>{
            cityName.innerHTML = currentLocation.name;
            degree.innerHTML = `${Math.round(currentLocation.main.temp)}${"<sup>°</sup>"}`
            condition.innerHTML = currentLocation.weather[0].description;
            country.innerHTML = currentLocation.sys.country
-           longitude.innerHTML = currentLocation.coord.lon
-           latitude.innerHTML = currentLocation.coord.lat
+           longitude.innerHTML = longiTude
+           latitude.innerHTML = latiTude
            cloud.innerHTML = `${currentLocation.clouds.all}${"%"}`
            pressure.innerHTML = currentLocation.main.pressure
            humidity.innerHTML = `${currentLocation.main.humidity}${"%"}`
