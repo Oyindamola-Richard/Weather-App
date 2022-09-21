@@ -52,26 +52,22 @@ const timeFormat = (timer)=>{
 
 async function currentLocation(){
     navigator.geolocation.getCurrentPosition((position)=>{
-        longitude.innerHTML = position.coords.longitude
-        latitude.innerHTML = position.coords.latitude
+        let key = "55ae2e99fca0dd8d02b79e20bcb13981"
+        let longitude = position.coords.longitude
+       let  latitude = position.coords.latitude
+       let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`
+       fetch(url).then((response)=>response.json()).then((currentLocation)=>{
+           cityName.innerHTML = currentLocation.name;
+           degree.innerHTML = `${Math.round(currentLocation.main.temp)}${"<sup>°</sup>"}`
+           condition.innerHTML = currentLocation.weather[0].description;
+           country.innerHTML = currentLocation.sys.country
+           longitude.innerHTML = currentLocation.coord.lon
+           latitude.innerHTML = currentLocation.coord.lat
+           cloud.innerHTML = `${currentLocation.clouds.all}${"%"}`
+           pressure.innerHTML = currentLocation.main.pressure
+           humidity.innerHTML = `${currentLocation.main.humidity}${"%"}`
+           wind.innerHTML = `${currentLocation.wind.speed}${"Km/hr"}`
+           gust.innerHTML = `${currentLocation.wind.gust}${"Km/hr"}`
+       })
     })
-    let key = "55ae2e99fca0dd8d02b79e20bcb13981"
-    let latitude = document.getElementById('latitude');
-    let longitude = document.getElementById('longitude');
-    const endpoint = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`
-    let response = await fetch(endpoint)
-    let currentLocation = await response.json()
-    console.log(currentLocation)
-
-    cityName.innerHTML = currentLocation.name;
-    degree.innerHTML = `${currentLocation.main.temp}${"<sup>°</sup>"}`
-    condition.innerHTML = currentLocation.weather[0].description;
-    country.innerHTML = currentLocation.sys.country
-    // longitude.innerHTML = currentLocation.coord.lon
-    // latitude.innerHTML = currentLocation.coord.lat
-    cloud.innerHTML = `${currentLocation.clouds.all}${"%"}`
-    pressure.innerHTML = currentLocation.main.pressure
-    humidity.innerHTML = `${currentLocation.main.humidity}${"%"}`
-    wind.innerHTML = `${currentLocation.wind.speed}${"Km/hr"}`
-    gust.innerHTML = `${currentLocation.wind.gust}${"Km/hr"}`
 }
