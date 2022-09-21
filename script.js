@@ -1,5 +1,5 @@
 
-let key = "Your API Key..."
+let key = "55ae2e99fca0dd8d02b79e20bcb13981"
 
 async function search (){
     const endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${userLocation.value}&appid=${key}&units=metric`
