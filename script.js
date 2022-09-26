@@ -9,7 +9,7 @@ async function search (){
     let icon = `http://openweathermap.org/img/wn/${jsonResponse.weather[0].icon}@2x.png`
     image.src = icon
     cityName.innerHTML = jsonResponse.name;
-    degree.innerHTML = `${Math.round(jsonResponse.main.temp)}${"<sup>°</sup>"}`
+    degree.innerHTML = `${Math.round(jsonResponse.main.temp)}${"<sup>°</sup>C"}`
     condition.innerHTML = jsonResponse.weather[0].description;
     country.innerHTML = jsonResponse.sys.country
     longitude.innerHTML = jsonResponse.coord.lon
@@ -58,7 +58,7 @@ async function currentLocation(){
        let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latiTude}&lon=${longiTude}&appid=${key}&units=metric`
        fetch(url).then((response)=>response.json()).then((currentLocation)=>{
            cityName.innerHTML = currentLocation.name;
-           degree.innerHTML = `${Math.round(currentLocation.main.temp)}${"<sup>°</sup>"}`
+           degree.innerHTML = `${Math.round(currentLocation.main.temp)}${"<sup>°</sup>C"}`
            condition.innerHTML = currentLocation.weather[0].description;
            country.innerHTML = currentLocation.sys.country
            longitude.innerHTML = longiTude
